@@ -1,96 +1,87 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-  <title>wlzp我的世界启动器介绍</title>
-  <style>
-    /* CSS 样式 */
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+        .container {
+            text-align: center;
+        }
 
-    header {
-      background-color: #333;
-      padding: 20px;
-      color: white;
-      text-align: center;
-    }
+        /* 初始状态 */
+        .welcome-message {
+            opacity: 0; /* 初始不可见 */
+            transform: translateY(-20px); /* 向上偏移一定距离 */
+            transition: opacity 1s, transform 1s;
+        }
 
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+        /* 动画结束后的状态 */
+        .welcome-message.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
+        /* 添加悬停效果 */
+        .download-button {
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #0056b3; /* 深蓝色 */
+            color: #fff; /* 白色 */
+            display: inline-block; /* 将按钮设置为行内块级元素 */
+            padding: 10px 20px; /* 添加一定的内边距 */
+            text-decoration: none; /* 去除下划线 */
+            border-radius: 5px; /* 添加圆角 */
+            margin: 10px; /* 添加外边距 */
+        }
 
-    p {
-      margin-bottom: 15px;
-    }
+        .download-button:hover {
+            background-color: #003d80; /* 深蓝色略深 */
+        }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 15px;
-    }
+        /* 按钮点击效果 */
+        .download-button:active {
+            transform: scale(0.95);
+        }
 
-    .login-form {
-      display: flex;
-      flex-direction: column;
-      max-width: 300px;
-      margin: 0 auto;
-    }
-
-    .form-input {
-      margin-bottom: 10px;
-      padding: 5px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    .form-button {
-      background-color: #333;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    footer {
-      background-color: #333;
-      padding: 20px;
-      color: white;
-      text-align: center;
-    }
-  </style>
+	body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('background.jpg');
+    background-size: cover; /* 使背景图片充满整个屏幕 */
+    background-position: center; /* 将背景图像水平垂直居中 */
+}
+        
+    </style>
+    <title>WLZP启动器主页</title>
 </head>
-<body background="屏幕截图%202023-04-01%20052748.png">
-  <header>
-    <h1>我的世界启动器介绍</h1>
-  </header>
+<body>
+    <div class="container">
+        <h1 class="welcome-message">欢迎来到《我的世界》启动器官方网站！</h1>
+        <p>我们为您带来了一个强大且易于使用的启动器，让您能够更好地享受《我的世界》这款游戏。无论您是新手还是老玩家，我们都致力于提供一流的用户体验。</p>
+        <a href="https://wwwf.lanzout.com/ilMMO1i1zwdg" download class="download-button">立即下载高版本</a>
+        <a href="https://wwm.lanzout.com/iIa9t1qiykfa" download class="download-button">立即下载Beta版本</a>
+        <p id="downloadMessage">提取码：WLZP</p>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=430685732&auto=1&height=66"></iframe>
+    </div>
+    <script>
+        // 等待页面加载完成后执行动画
+        document.addEventListener('DOMContentLoaded', function() {
+            var welcomeMessage = document.querySelector('.welcome-message');
+            welcomeMessage.classList.add('visible');
+        });
+    </script>
 
-  <main>
-    <p>wlzp我的世界启动器是一个方便的工具，可帮助玩家管理和启动不同版本的“我的世界”游戏。</p>
-
-    <h2>功能特点</h2>
-    <ul>
-      <li>支持多版本：您可以方便地在不同的“我的世界”版本之间切换。</li>
-      <li>自动更新：启动器会自动检查并下载最新的“我的世界”版本。</li>
-      <li>可选Mod管理：您可以轻松地安装、卸载和管理您喜欢的Mod。</li>
-      <li>服务器列表：方便地添加、删除和连接到您喜欢的服务器。</li>
-      <li>纹理包和资源包：选择、安装和管理您喜欢的纹理包和资源包。</li>
-    </ul>
-
-    <h2>截图</h2>
-    <img src="屏幕截图%202023-04-22%20122209.png" alt="我的世界启动器截图1" width="66" height="63">&nbsp;
 	
     <p>------------</p>	
 
@@ -112,14 +103,11 @@
 
 	  
     <p>------------</p>	
-	  
-    <h2>下载和安装</h2>
-    <p>您可以在我们的官方网站上下载和安装最新版本的我的世界启动器。</p>
-    <a target="_blank" href="zz.html">点击此处下载 </a>
+
 
     <h2>支持和反馈</h2>
     <p>如果您遇到任何问题或有何建议，请联系我们的支持团队。</p>
-    <p>Wechat:wjq3543832208&amp;minecraft_lizhipeng</p>
+    <p>Wechat:wjq3543832208                  &         minecraft_lizhipeng</p>
 	<p>
 	<footer>
     版权所有 &copy; 2023 我的世界wlzp启动器</p>
