@@ -4,32 +4,13 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>欢迎来到WLZP启动器官方网站</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 引入外部样式表 -->
+    <title>WLZP启动器主页</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f2f2f2; /* 设置页面背景颜色 */
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.9); /* 设置容器背景颜色和透明度 */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 20px; /* 添加容器与页面底部的间距 */
-        }
-
         .custom-button {
             display: inline-block;
             padding: 10px 20px;
-            margin: 10px; /* 添加按钮之间的间距 */
-            background-color: #2196F3;
+            background-color: #2196F3; /* 设置蓝色背景 */
             color: white;
             text-align: center;
             text-decoration: none;
@@ -39,19 +20,34 @@
         }
 
         .custom-button:hover {
-            background-color: #1976D2;
+            background-color: #1976D2; /* 悬停时颜色变化 */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>欢迎来到WLZP启动器官方网站！</h1>
-        <p>点击以下按钮立即下载WLZP启动器：</p>
-        <a href="https://wwwf.lanzout.com/ilMMO1i1zwdg" download class="custom-button">立即下载</a>
-        <a href="https://wwm.lanzout.com/iIa9t1qiykfa" download class="custom-button">Beta版本</a>
-        <a href="https://wwm.lanzout.com/iffxl1sdzdub" download class="custom-button">WLZP1.8.9</a>
-        <p>提取码：WLZP</p>
-        <p>&copy; 2024 WLZP启动器. 版权所有。</p>
-    </div>
+    <header>
+        <h1 class="welcome-message">欢迎来到《我的世界》启动器官方网站！</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <p>我们为您带来了一个强大且易于使用的启动器，让您能够更好地享受《我的世界》这款游戏。无论您是新手还是老玩家，我们都致力于提供一流的用户体验。</p>
+            <div class="centered-buttons">
+                <a href="https://wwwf.lanzout.com/ilMMO1i1zwdg" download class="custom-button">立即下载高版本</a>
+                <a href="https://wwm.lanzout.com/iIa9t1qiykfa" download class="custom-button">立即下载Beta版本</a>
+                <a href="https://wwm.lanzout.com/iffxl1sdzdub" download class="custom-button">WLZP1.8.9</a>
+            </div>
+            <p id="downloadMessage">提取码：WLZP</p>
+            <iframe src="//music.163.com/outchain/player?type=2&id=430685732&auto=1&height=66" width="100%" height="86" frameborder="no" scrolling="no"></iframe>
+        </div>
+    </main>
+
+    <footer>
+        <p>如果您遇到任何问题或有何建议，请联系我们的支持团队。</p>
+        <p>Wechat: wjq3543832208 & minecraft_lizhipeng</p>
+        <p>&copy; 2024 我的世界WLZP启动器</p>
+    </footer>
+
+    <script src="scripts.js"></script> <!-- 引入外部脚本文件 -->
 </body>
 </html>
